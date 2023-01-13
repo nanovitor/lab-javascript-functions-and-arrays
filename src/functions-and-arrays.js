@@ -1,19 +1,48 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(num1, num2) {
 
-
+if (num1 > num2) {
+  return num1;
+}
+  else {
+    return num2;
+  }
+}
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+function findLongestWord(arr) {
+
+  let maiorPalavra = arr[0]; //declaro que é a primeira para ter parâmetro de comparação
+
+  if (arr.length === 0) {
+    return null;}
+
+  for (let i = 0; i < arr.length; i++) {
+    let palavraAtual = arr[i]; //como é uma por vez o nome é palavra atual
+
+     if(palavraAtual.length > maiorPalavra.length) {
+       maiorPalavra = palavraAtual;
+  }
+}
+return maiorPalavra;
+}
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(arr) {
+
+let sum = 0 // a soma inicia em 0
+
+for (let i = 0; i < arr.length; i++){ //pega cada item na array e faz o loop
+  sum += arr[i]
+}
+return sum
+}
 
 
 
@@ -26,13 +55,39 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arr) {
+
+let sum = 0
+
+if (arr.length === 0) {
+  return null;}
+
+for (let i = 0; i < arr.length; i++){
+  sum += arr[i]
+}
+return sum /= arr.length
+}
+
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arr) {
+
+let sum = 0;
+let avg = 0;
+
+if (arr.length === 0) {
+  return null;}
+
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i].length;
+  avg = sum / arr.length;
+}
+return avg
+}
+
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -52,8 +107,28 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arr) {
 
+  if (arr.length === 0) {
+    return null;}
+
+  const newArray = [];
+
+  for (let i=0; i < arr.length; i++) {
+    if (newArray.includes(arr[i])) {
+      return false
+    }
+    else {
+      newArray += arr[]
+    }
+  }
+
+}
+
+  //OUTRO MÉTODO LEGÍTIMO - MAS NAO ENTENDI
+  // if (arr.length === 0) {
+  //   return null;}
+  // return arr.filter((item, index) => arr.indexOf(item) === index);}
 
 
 // Iteration #6: Find elements
